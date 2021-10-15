@@ -12,5 +12,22 @@ namespace S2_NCORE_FirstMVC.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(string email, string password)
+        {
+            if (email == "carlos@hotmail.com" && password =="123456")
+            {
+                return View("Login");
+            }
+
+            return RedirectToAction("Login");
+        }
+
     }
 }
