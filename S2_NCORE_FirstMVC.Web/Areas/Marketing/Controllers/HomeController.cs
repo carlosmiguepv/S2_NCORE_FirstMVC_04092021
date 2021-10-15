@@ -27,7 +27,7 @@ namespace S2_NCORE_FirstMVC.Web.Areas.Marketing.Controllers
 
         public IEnumerable<Product> GetProductsJsonLocal()
         {
-            var folder = Path.Combine(Directory.GetCurrentDirectory(), "Area\\Marketing\\Data\\products.json");
+            var folder = Path.Combine(Directory.GetCurrentDirectory(), "Areas\\Marketing\\Data\\products.json");
             var json = System.IO.File.ReadAllText(folder);
 
             var products = JsonConvert.DeserializeObject<IEnumerable<Product>>(json);
