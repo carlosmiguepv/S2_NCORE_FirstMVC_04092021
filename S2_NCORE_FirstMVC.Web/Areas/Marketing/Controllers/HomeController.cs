@@ -23,7 +23,18 @@ namespace S2_NCORE_FirstMVC.Web.Areas.Marketing.Controllers
             var products = GetProductsJsonLocal();
             return View(products);
         }
-
+        public IActionResult ProductsViewData()
+        {
+            var products = GetProductsJsonLocal();
+            ViewData["ProductList"] = products;
+            return View();
+        }
+        public IActionResult ProductsViewBag()
+        {
+            var products = GetProductsJsonLocal();
+            ViewBag.ProductList = products;
+            return View();
+        }
 
         public IEnumerable<Product> GetProductsJsonLocal()
         {
