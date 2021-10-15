@@ -23,7 +23,7 @@ namespace S2_NCORE_FirstMVC.Web.Controllers
         {
             if (email == "carlos@hotmail.com" && password =="123456")
             {
-                return View("Login");
+                return RedirectToAction("Index","Home",new { area = "Marketing"});
             }
 
             return RedirectToAction("Login");
